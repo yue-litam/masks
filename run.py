@@ -39,14 +39,16 @@ def read_command_args():
     args = sys.argv
     args_count = len(args) - 1
     if args_count == 1 and (args[1] == '-h' or args[1] == '--help'):
-        print(' -h, --help          查看所有参数')
-        print(' -n, --name          设置姓名')
-        print(' -i, --id            设置身份证号码')
-        print(' -m, --mobile        设置手机号码')
-        print(' -t, --type          设置口罩类型, 1=N95(5个), 2=普通防护(10个)')
-        print(' -s, --session       设置会话id')
-        print(' --status-timeout    检查状态超时时间，单位：秒，默认 3 秒')
-        print(' --order_timeout     下单接口超时时间，单位：秒，默认 2 秒')
+        print()
+        print('    -n, --name          设置姓名')
+        print('    -i, --id            设置身份证号码')
+        print('    -m, --mobile        设置手机号码')
+        print('    -t, --type          设置口罩类型, 1=N95(5个), 2=普通防护(10个)')
+        print('    -s, --session       设置会话id')
+        print('    --status-timeout    检查状态超时时间，单位：秒，默认 3 秒')
+        print('    --order_timeout     下单接口超时时间，单位：秒，默认 2 秒')
+        print()
+        print('    -h, --help          查看所有参数', end='\n\n')
         exit(0)
     if args_count & 1 == 1:
         logger.error('[Check your arguments]检查输入参数')
