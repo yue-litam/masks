@@ -15,7 +15,7 @@ charles_proxies = {
 }
 
 
-def get(url, data=None, headers=None, proxies=None, verify='', timeout=15):
+def get(url, data=None, headers=None, proxies=None, verify=None, timeout=15):
     if headers is None:
         headers = {}
     if data is None:
@@ -34,7 +34,7 @@ def get(url, data=None, headers=None, proxies=None, verify='', timeout=15):
         return None
 
 
-def post(url, data, headers=None, proxies=None, verify='', timeout=15):
+def post(url, data, headers=None, proxies=None, verify=None, timeout=15):
     if headers is None:
         headers = {}
     if data is None:
